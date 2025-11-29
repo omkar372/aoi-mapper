@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
+
+.map-control-custom {
+  @apply bg-white rounded-lg shadow-lg;
+}
+
+.map-control-custom button {
+  @apply w-10 h-10 flex items-center justify-center cursor-pointer border-b border-gray-200;
+}
+
+.map-control-custom button:last-child {
+  @apply border-b-0;
+}
+
+.map-control-custom button:hover {
+  @apply bg-gray-50;
+}
+
+
+.drawing-toolbar {
+  @apply flex gap-2 bg-white p-2 rounded-lg shadow-lg;
+}
+
+.drawing-toolbar button {
+  @apply px-3 py-2 rounded border border-gray-300 hover:bg-gray-50 disabled:opacity-50;
+}
+
+.drawing-toolbar button.active {
+  @apply bg-blue-500 text-white border-blue-500;
+}
