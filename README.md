@@ -2,7 +2,7 @@
 
 A modern, interactive web application for creating Areas of Interest (AOI) on satellite imagery using React, TypeScript, and Leaflet.
 
-## 🚀 Quick Start (30 seconds)
+##  Quick Start (30 seconds)
 
 ```bash
 npm install && npm run dev
@@ -11,18 +11,18 @@ npm install && npm run dev
 
 **See [QUICKSTART.md](./QUICKSTART.md) for usage guide.**
 
-## ✨ Features
+##  Features
 
-- 🗺️ **Interactive Map**: Leaflet-based map with satellite imagery from NRW DOP WMS
-- 🎨 **Draw AOIs**: Create points, lines, and polygons directly on the map
-- 🔍 **Location Search**: Geocoding with Nominatim for quick location lookup
-- 💾 **Auto-Save**: Features persist across sessions using localStorage
-- 🎯 **Layer Management**: Toggle satellite layer visibility and manage features
-- ♿ **Accessible**: WCAG 2.1 Level A compliant with ARIA labels
-- ⚡ **Performance**: Optimized for 1000+ features with debouncing and lazy loading
-- 📱 **Responsive**: Mobile-friendly design with Tailwind CSS
+-  **Interactive Map**: Leaflet-based map with satellite imagery from NRW DOP WMS
+-  **Draw AOIs**: Create points, lines, and polygons directly on the map
+-  **Location Search**: Geocoding with Nominatim for quick location lookup
+-  **Auto-Save**: Features persist across sessions using localStorage
+-  **Layer Management**: Toggle satellite layer visibility and manage features
+-  **Accessible**: WCAG 2.1 Level A compliant with ARIA labels
+-  **Performance**: Optimized for 1000+ features with debouncing and lazy loading
+-  **Responsive**: Mobile-friendly design with Tailwind CSS
 
-## 📖 Documentation
+##  Documentation
 
 | Document | Purpose |
 |----------|---------|
@@ -31,13 +31,13 @@ npm install && npm run dev
 | [ARCHITECTURE.md](./ARCHITECTURE.md) | Technical architecture & diagrams |
 | [SUMMARY.md](./SUMMARY.md) | Project overview & statistics |
 
-## 📋 Environment Variables
+##  Environment Variables
 
 No environment variables required for basic functionality. The application uses public APIs:
 - **WMS Service**: https://www.wms.nrw.de/geobasis/wms_nw_dop (no auth required)
 - **Geocoding**: OpenStreetMap Nominatim (public, rate-limited)
 
-## 🏗️ Architecture
+##  Architecture
 
 ### State Management (Zustand + Persistence)
 
@@ -70,13 +70,13 @@ Leaflet was selected for the following reasons:
 
 | Criteria | Leaflet | MapLibre | OpenLayers | react-map-gl |
 |----------|---------|----------|-----------|------------|
-| Bundle Size | ✅ 42KB gzipped | ~90KB | ~180KB | ~50KB |
-| Learning Curve | ✅ Very Low | Medium | Steep | Medium |
-| GeoJSON Support | ✅ Excellent | Excellent | Excellent | Excellent |
-| WMS Layer Support | ✅ Native | Via plugins | ✅ Native | Via plugins |
-| React Integration | Via react-leaflet | Via react-map-gl | Via react-openlayers | ✅ Native |
-| Community | ✅ Largest | Growing | Large | Growing |
-| Performance | ✅ Great for <10K markers | Optimized for Mapbox | Heavy | Vector-focused |
+| Bundle Size |  42KB gzipped | ~90KB | ~180KB | ~50KB |
+| Learning Curve |  Very Low | Medium | Steep | Medium |
+| GeoJSON Support |  Excellent | Excellent | Excellent | Excellent |
+| WMS Layer Support |  Native | Via plugins |  Native | Via plugins |
+| React Integration | Via react-leaflet | Via react-map-gl | Via react-openlayers |  Native |
+| Community |  Largest | Growing | Large | Growing |
+| Performance |  Great for <10K markers | Optimized for Mapbox | Heavy | Vector-focused |
 
 **Why not alternatives?**
 - **MapLibre**: Good for vector tiles; WMS support requires plugins
@@ -105,7 +105,7 @@ src/
 - **No Component Props Drilling**: Zustand eliminates prop drilling
 - **Atomic Components**: Small, focused, reusable components
 
-## 🎨 UI/UX
+##  UI/UX
 
 ### Responsive Design
 - Mobile-first Tailwind CSS
@@ -129,36 +129,36 @@ src/
 - **Typography**: System font stack for performance
 - **Spacing**: 4px base unit (Tailwind default)
 
-## 📊 Bonus Features Implemented
+##  Bonus Features Implemented
 
-### ✅ Interactive Drawing Tools
+###  Interactive Drawing Tools
 - **Point Drawing**: Click map to place individual points
 - **Line Drawing**: Click multiple points, right-click to complete
 - **Polygon Drawing**: Click 3+ points, right-click to finalize
 - **Real-time Preview**: Dashed line preview while drawing
 - **Visual Feedback**: Red preview points during drawing
 
-### ✅ Layer Management UI
+###  Layer Management UI
 - **WMS Toggle**: Show/hide satellite imagery layer
 - **Feature List**: Display all drawn features with names
 - **Delete Individual**: Remove features one by one
 - **Clear All**: Bulk delete with confirmation
 - **Feature Count**: Shows total features drawn
 
-### ✅ Geocoding/Search Integration
+###  Geocoding/Search Integration
 - **Nominatim Integration**: Search locations by name
 - **Debounced Search**: 300ms debounce to reduce API calls
 - **Autocomplete Dropdown**: Show top 5 results
 - **Zoom to Result**: Automatically centers map on selected location
 - **User-Agent Header**: Compliant with Nominatim ToS
 
-### ✅ Persistent Features
+###  Persistent Features
 - **localStorage Integration**: Auto-saves all drawn features
 - **Zustand Middleware**: Automatic serialization
 - **Reload Recovery**: Features restored on page reload
 - **Versioned Store**: Future-proof migration support
 
-### ✅ Performance Optimization
+###  Performance Optimization
 
 #### Implemented:
 1. **Debouncing**:
@@ -186,7 +186,7 @@ src/
 - Feature list scroll: Smooth 60fps
 - Estimated 1000-point limit before optimization needed
 
-## 🧪 Testing Strategy
+##  Testing Strategy
 
 ### Test Coverage
 
@@ -267,7 +267,7 @@ src/
    - Load time with 1000+ features
    - Memory usage over time
 
-## 🔧 Code Quality
+##  Code Quality
 
 ### ESLint Configuration
 - Strict TypeScript rules enabled
@@ -287,7 +287,7 @@ src/
 - No any type warnings
 - Path alias resolution (`@/*`)
 
-## 🌍 Map API
+##  Map API
 
 ### WMS Layer
 
@@ -315,7 +315,7 @@ src/
 
 **User-Agent**: Required in headers (set to "AOI-Satellite-Mapper")
 
-## 📦 Tech Stack Justification
+##  Tech Stack Justification
 
 | Technology | Justification |
 |-----------|---|
@@ -327,7 +327,7 @@ src/
 | **Zustand** | Minimal boilerplate; built-in persistence middleware |
 | **Playwright** | Cross-browser testing; excellent documentation; GitHub Actions ready |
 
-## 🚨 Tradeoffs Made
+##  Tradeoffs Made
 
 ### 1. **Zustand vs Redux**
 - **Tradeoff**: Fewer features vs less boilerplate
@@ -354,7 +354,7 @@ src/
 - **Decision**: Simpler UX; users can delete and redraw
 - **Mitigation**: Edit plugin available (Leaflet.Path.Drag)
 
-## 📈 Production Readiness
+##  Production Readiness
 
 ### What We Would Add:
 
@@ -418,7 +418,7 @@ src/
 | **Bug Fixes & Polish** | 1h | Edge cases, responsiveness |
 | **Total** | **~12.5h** | ~1.5 days of focused development |
 
-## 🎯 Future Enhancements
+##  Future Enhancements
 
 1. **Backend Integration** - Add user accounts and cloud persistence
 2. **Advanced Drawing** - Vertex editing, feature properties UI
@@ -428,11 +428,11 @@ src/
 6. **Mobile App** - React Native version
 7. **3D Visualization** - Cesium.js integration for 3D terrain
 
-## 📄 License
+##  License
 
 MIT License - See LICENSE file
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions welcome! Please:
 1. Fork the repository
@@ -441,12 +441,12 @@ Contributions welcome! Please:
 4. Run linter: `npm run lint`
 5. Submit a pull request
 
-## 📞 Support
+##  Support
 
 For issues, feature requests, or questions:
 - Open a GitHub issue
-- Email: support@aoi-mapper.dev
+- Email: dahiwalomkar443@gmail.com
 
 ---
 
-**Built with ❤️ using React, TypeScript, and Leaflet**
+**Built with  using React, TypeScript, and Leaflet**
